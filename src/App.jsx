@@ -11,6 +11,7 @@ import React from 'react';
 import Header from './components/Header/Header';
 import Button from './components/Button/Button';
 
+import VideoMain from "./components/VideoMain/VideoMain"
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
         <Header />
       </div>
          {/* <Button /> */}
+
+         <VideoMain />
     </>
   );
 }
