@@ -1,0 +1,28 @@
+@use "src/styles/partials/__global.scss" as *;
+@use "src/styles/partials/__variables.scss" as *;
+
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 15rem;
+  height: 2.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: $secondary-color-alabaster;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+
+  font-size: 16px;
+  //   flex: 1;
+  background-color: transparent;
+}
