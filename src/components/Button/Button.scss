@@ -1,31 +1,31 @@
-@use "../../styles/partials/_variables" as *;
+@import "../../styles/global.scss";
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem;
-
-  &-filler {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    padding: 0 32px;
-    background-color: $primary-color-blue;
-    color: $primary-color-white;
-    border: none;
-    border-radius: 4px;
-    font-weight: 700;
-    line-height: 20px;
-    cursor: pointer;
-    font-size: 12px;
+  background-color: $primary-color-blue;
+  color: $primary-color-white;
+  border: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  position: relative;
+  height: 2.5rem;
+  cursor: pointer;
+  &:hover {
+    background-color: $secondary-color-dark-blue;
   }
-}
 
-.button .icon {
-  height: 20px;
-  margin-right: 8px;
+  &__icon {
+    width: 1.2rem;
+    position: absolute;
+    left: 0.625rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @include tablet {
+    width: 9.375rem;
+    min-width: 9.375rem;
+    padding: 0 2rem;
+  }
 }
 
 // @media (max-width: $tablet-breakpoint) {

@@ -1,5 +1,4 @@
-@use "../../styles/partials/_variables" as *;
-@use "src/styles/partials/__global.scss" as *;
+@import "../../styles/global.scss";
 
 .video-main {
   width: 100%;

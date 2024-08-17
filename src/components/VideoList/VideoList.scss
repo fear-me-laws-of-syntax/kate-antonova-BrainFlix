@@ -1,0 +1,12 @@
+@import "../../styles/global.scss";
+
+.vidlist {
+  &__heading {
+    color: $primary-color-silver;
+    text-transform: uppercase;
+    padding-top: 1.5rem;
+    @include tablet {
+      padding-top: 2.25rem;
+    }
+  }
+}

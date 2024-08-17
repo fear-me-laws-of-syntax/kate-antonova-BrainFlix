@@ -1,0 +1,25 @@
+@import "../../styles/global.scss";
+
+.item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 10rem;
+
+    &--title {
+      font-weight: 600;
+    }
+  }
+
+  &__image {
+    width: 6.5rem;
+    height: auto;
+
+    object-fit: cover;
+  }
+}

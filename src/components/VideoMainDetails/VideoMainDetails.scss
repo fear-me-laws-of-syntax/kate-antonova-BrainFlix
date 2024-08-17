@@ -1,6 +1,5 @@
-@use "src/styles/partials/__global.scss" as *;
+@import "../../styles/global.scss";
 
 .video-details {
   display: block;
-  margin-top: 9rem;
 }

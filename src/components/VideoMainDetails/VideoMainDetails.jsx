@@ -1,17 +1,25 @@
-import './VideoMainDetails.scss';
+import "./VideoMainDetails.scss";
 
-function VideoMainDetails () {
+function VideoMainDetails({ selectedVideo }) {
   return (
     <div className="video-details">
-     <h1>The Future of Artificial Intelligence</h1>
-<p>Aiden Thompson</p>
-<p>1691471862000</p>
-<p>Views: 980,544</p>
-<p>Likes: 22,479</p>
-<p>Your insights into the future of AI are enlightening! The intersection of technology and ethics is particularly thought-provoking. Keep us updated on the tech front!
-</p>
+      <h1>{selectedVideo.title}</h1>
+
+      <div>
+        <div>
+          <h2>{selectedVideo.channel}</h2>
+          <p>{new Date(selectedVideo.timestamp).toLocaleDateString()}</p>
+        </div>
+
+        <div>
+          <p>Views:{selectedVideo.views}</p>
+          <p>Likes: {selectedVideo.likes}</p>
+        </div>
       </div>
+
+      <p>{selectedVideo.description}</p>
+    </div>
   );
-};
+}
 
 export default VideoMainDetails;

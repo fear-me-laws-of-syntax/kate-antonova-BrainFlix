@@ -1,0 +1,26 @@
+@import "./variables";
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+// @mixin breakpoint($point) {
+//   @if $point == desktop {
+//     @media (min-width: $desktop-breakpoint) {
+//       @content;
+//     }
+//   }
+//   @if $point == tablet {
+//     @media (min-width: $tablet-breakpoint) {
+//       @content;
+//     }
+//   }
+// }
