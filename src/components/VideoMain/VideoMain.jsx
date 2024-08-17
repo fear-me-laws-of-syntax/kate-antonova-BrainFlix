@@ -1,8 +1,9 @@
-// import React from "react";
-// import videos from "src/assets/images/Upload-video-preview.jpg"
+
+import videos from "../../data/video-details.json";
 import "./VideoMain.scss";
 
-let VideoMain = () => 
+
+const VideoMain = ({selectedVideoId}) => 
 // = ({ selectedVideoId }) => 
 // {
   // const filteredVideo = videos.find((video) => video.id === selectedVideoId);

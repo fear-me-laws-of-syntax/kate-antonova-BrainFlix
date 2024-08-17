@@ -1,9 +1,11 @@
 @use "../../styles/partials/_variables" as *;
+@use "src/styles/partials/__global.scss" as *;
 
 .video-main {
   width: 100%;
   height: 10rem;
   aspect-ratio: 16/9;
+  display: block;
 }
 
 video {
@@ -11,4 +13,5 @@ video {
   height: 20rem;
   aspect-ratio: 16/9;
   background-color: $primary-color-black;
+  display: block;
 }
