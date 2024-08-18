@@ -11,3 +11,4 @@ function VideoMain({ video }) {
 }
 
 export default VideoMain;
+    

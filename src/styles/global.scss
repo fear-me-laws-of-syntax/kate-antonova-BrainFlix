@@ -33,7 +33,7 @@ h1 {
 h2 {
   font-size: 0.75rem; /* 12px */
   line-height: 1.25rem; /* 20px */
-  font-weight: 700;
+  font-weight: $bold-weight;
 
   @include tablet {
     font-size: 0.75rem; /* 12px */
@@ -44,7 +44,7 @@ h2 {
 h3 {
   font-size: 0.8125rem; /* 13px */
   line-height: 1.125rem; /* 18px */
-  font-weight: 700;
+  font-weight: $bold-weight;
 
   @include tablet {
     font-size: 0.875rem; /* 14px */
@@ -69,7 +69,8 @@ p {
   }
 }
 
-ul {
+ul,
+li {
   list-style: none;
 }
 

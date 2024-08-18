@@ -1,1 +1,7 @@
 @import "../../styles/global.scss";
+
+.comment-form {
+  @include tablet {
+    display: flex;
+  }
+}

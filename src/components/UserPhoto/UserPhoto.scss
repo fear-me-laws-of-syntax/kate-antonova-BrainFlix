@@ -1,8 +1,14 @@
 @import "../../styles/global.scss";
 .user-photo {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: 50%;
   object-fit: cover;
   margin-left: 1rem;
+  background-color: $secondary-color-mercury;
+
+  @include tablet {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }

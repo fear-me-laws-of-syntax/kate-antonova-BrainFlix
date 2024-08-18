@@ -5,7 +5,7 @@ import "./CommentList.scss";
 function CommentList({ comments }) {
   return (
     <>
-      <p>{comments.length} Comments</p>
+      <h2 classN>{comments.length} Comments</h2>
       <CommentForm />
       <div className="comments">
         {comments.map((comment) => (

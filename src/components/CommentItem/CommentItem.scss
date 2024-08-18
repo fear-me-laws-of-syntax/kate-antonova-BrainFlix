@@ -1,1 +1,43 @@
 @import "../../styles/global.scss";
+
+.comments {
+  border-bottom: 0.0625rem solid #e1e1e1;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-item {
+  display: flex;
+  flex-direction: row;
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    background-color: $secondary-color-mercury;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin-top: 1rem;
+  }
+
+  &__content {
+    border-top: 0.0625rem solid #e1e1e1;
+    padding-left: 1rem;
+    width: 88%;
+    // border-bottom: 0.0625rem solid #e1e1e1;
+    &--name {
+      font-weight: $demo-weight;
+    }
+
+    &--name-date {
+      display: flex;
+      justify-content: space-between;
+      white-space: nowrap;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .grey {
+    color: $primary-color-silver;
+  }
+}

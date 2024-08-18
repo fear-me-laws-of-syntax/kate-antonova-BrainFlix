@@ -1,5 +1,46 @@
 @import "../../styles/global.scss";
 
-.video-details {
-  display: block;
+.video {
+  // display: block;
+
+  &-details {
+    border-top: 0.0625rem solid $secondary-color-mercury;
+    border-bottom: 0.0625rem solid $secondary-color-mercury;
+    padding: 0.5rem 0;
+
+    &__views-likes {
+      display: flex;
+      flex-direction: column;
+      margin-right: 10%;
+
+      @include tablet {
+        flex-direction: row;
+        gap: 2rem;
+        margin-right: 0%;
+      }
+    }
+
+    &__components {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__name-time {
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+    @include tablet {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+
+  .icon {
+    padding-right: 0.5rem;
+  }
+
+  .grey {
+    color: $primary-color-silver;
+  }
 }

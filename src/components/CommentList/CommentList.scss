@@ -1,13 +1,14 @@
 @import "../../styles/global.scss";
 
+.length {
+  font-weight: $demo-weight;
+}
+
 .conversation__form-group {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   display: block;
-
-  // margin-top: 0.5rem;
-  // margin-bottom: 1rem;
 
   margin: 2rem;
   font-family: "Avenir";
