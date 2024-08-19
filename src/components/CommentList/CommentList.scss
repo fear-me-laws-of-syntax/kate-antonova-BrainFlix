@@ -1,0 +1,33 @@
+@import "../../styles/global.scss";
+
+.length {
+  font-weight: $demo-weight;
+}
+
+.conversation__form-group {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  display: block;
+
+  margin: 2rem;
+  font-family: "Avenir";
+  font-size: 0.875rem;
+  color: grey;
+  text-align: left;
+}
+
+.conversation__form-label {
+  color: $secondary-color-mercury;
+}
+
+#msg {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-family: "Avenir";
+  margin-top: 0.5rem;
+  resize: none;
+  border: 1px solid $primary-color-silver;
+  background-color: $secondary-color-alabaster;
+}

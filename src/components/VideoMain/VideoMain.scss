@@ -1,0 +1,29 @@
+@import "../../styles/global.scss";
+
+.video-main {
+  width: 100%;
+  height: 10rem;
+  aspect-ratio: 16/9;
+  display: block;
+}
+
+video {
+  width: 100%;
+  height: 20rem;
+  aspect-ratio: 16/9;
+  background-color: $primary-color-black;
+  display: block;
+
+  @include tablet {
+    height: 40rem;
+  }
+}
+
+.video__img::-webkit-media-controls-play-button,
+.video__img::-webkit-media-controls-pause-button,
+.video__img::-webkit-media-controls-fullscreen-button,
+.video__img::-webkit-media-controls-volume-slider,
+.video__img::-webkit-media-controls-mute-button {
+  /* Icon controls styling */
+  fill: white; /* White fill color for all control icons */
+}
