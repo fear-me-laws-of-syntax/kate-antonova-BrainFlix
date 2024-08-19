@@ -10,20 +10,26 @@
 .comment-item {
   display: flex;
   flex-direction: row;
+  border-top: 0.0625rem solid $secondary-color-mercury;
+
   &__avatar {
-    width: 40px;
-    height: 40px;
+    width: 2.25rem;
+    height: 2.25rem;
     background-color: $secondary-color-mercury;
     border-radius: 50%;
     box-sizing: border-box;
     margin-top: 1rem;
+    flex-shrink: 0;
+
+    @include tablet {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   }
 
   &__content {
-    border-top: 0.0625rem solid #e1e1e1;
     padding-left: 1rem;
-    width: 88%;
-    // border-bottom: 0.0625rem solid #e1e1e1;
+
     &--name {
       font-weight: $demo-weight;
     }
@@ -31,13 +37,17 @@
     &--name-date {
       display: flex;
       justify-content: space-between;
-      white-space: nowrap;
       margin-top: 1rem;
       margin-bottom: 0.5rem;
+    }
+
+    &--text {
+      padding-bottom: 1rem;
     }
   }
 
   .grey {
     color: $primary-color-silver;
+    padding-right: 0.5rem;
   }
 }

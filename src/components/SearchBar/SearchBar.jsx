@@ -1,4 +1,3 @@
-// import React from 'react';
 import "./SearchBar.scss";
 
 function SearchBar() {
@@ -9,7 +8,7 @@ function SearchBar() {
         alt="Search"
         className="search-icon"
       />
-      <input type="text" placeholder="Search" className="search-input" />
+      <input id="search" type="text" placeholder="Search" className="search-input" />
     </div>
   );
 }

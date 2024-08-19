@@ -7,11 +7,15 @@ import "./CommentForm.scss";
 export default function CommentForm() {
   return (
     <div className="comment-form">
+
+<div className="user-photo-padding">
       <UserPhoto />
-      <div>
-        <div className="conversation__form-group">
+      </div>
+
+      <div className="comment-form--input">
+        <div className="conversation__form--group">
           <label className="conversation__form-label" htmlFor="msg">
-            JOIN THE CONVERSATION
+           JOIN THE CONVERSATION
           </label>
           <textarea
             id="msg"
@@ -19,7 +23,8 @@ export default function CommentForm() {
             placeholder="Add a new comment"
           ></textarea>
         </div>
-        <Button text="COMMENT" imageUrl={addCommentIcon} />
+
+        <Button className="button" text="COMMENT" imageUrl={addCommentIcon} />
       </div>
     </div>
   );

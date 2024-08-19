@@ -1,17 +1,20 @@
 @import "../../styles/global.scss";
 
 .video {
-  // display: block;
-
   &-details {
     border-top: 0.0625rem solid $secondary-color-mercury;
     border-bottom: 0.0625rem solid $secondary-color-mercury;
     padding: 0.5rem 0;
 
+    @include tablet {
+      border-top: none;
+    }
+
     &__views-likes {
       display: flex;
       flex-direction: column;
       margin-right: 10%;
+      gap: 0.5rem;
 
       @include tablet {
         flex-direction: row;
@@ -23,6 +26,7 @@
     &__components {
       display: flex;
       justify-content: space-between;
+      padding: 1rem 0;
     }
   }
 
@@ -42,5 +46,10 @@
 
   .grey {
     color: $primary-color-silver;
+    padding-right: 0.5rem;
   }
+}
+
+.description {
+  padding: 1rem 0;
 }
