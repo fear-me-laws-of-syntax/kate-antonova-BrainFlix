@@ -1,7 +1,46 @@
 @import "../../styles/global.scss";
 
 .comment-form {
+  display: flex;
+
   @include tablet {
     display: flex;
   }
+
+  &--input {
+    @include tablet {
+      display: flex;
+      align-items: end;
+      gap: 1rem;
+
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+}
+
+.conversation__form--group {
+  margin: 0;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.user-photo-padding {
+  margin-top: 2rem;
+  margin-right: 0.5rem;
+}
+
+.comment-form--input .conversation__form--group .conversation__form-label {
+  font-size: 0.75rem;
+  font-weight: $bold-weight;
+  color: $primary-color-silver;
+}
+
+.comment-form--input {
+  width: 100%;
 }

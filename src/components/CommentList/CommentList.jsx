@@ -5,15 +5,18 @@ import "./CommentList.scss";
 function CommentList({ comments }) {
   return (
     <>
-      <h2 classN>{comments.length} Comments</h2>
+  
+      <h2>{comments.length} Comments</h2>
       <CommentForm />
       <div className="comments">
         {comments.map((comment) => (
           <CommentItem key={comment.id} comment={comment} />
         ))}
-      </div>
+
+    </div>
     </>
   );
 }
+
 
 export default CommentList;
