@@ -13,6 +13,10 @@ button,
 textarea,
 input {
   font-family: "Avenir Next", sans-serif;
+
+  @include tablet {
+    height: 40px;
+  }
 }
 
 h1 {
@@ -52,12 +56,6 @@ h3 {
   }
 }
 
-// a {
-//   color: $primary-color-light;
-//   text-decoration: none;
-//   margin-bottom: 1rem; /* 16px */
-// }
-
 p {
   font-size: 0.8125rem; /* 13px */
   line-height: 1.125rem; /* 18px */
@@ -73,8 +71,6 @@ ul,
 li {
   list-style: none;
 }
-
-//
 
 .header-search {
   display: flex;
