@@ -1,0 +1,30 @@
+@import "../../styles/global.scss";
+
+.button {
+  background-color: $primary-color-blue;
+  color: $primary-color-white;
+  border: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  position: relative;
+  height: 2.5rem;
+  cursor: pointer;
+  font-weight: $bold-weight;
+  &:hover {
+    background-color: $secondary-color-dark-blue;
+  }
+
+  &__icon {
+    width: 1.2rem;
+    position: absolute;
+    left: 0.625rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @include tablet {
+    width: 9.375rem;
+    min-width: 9.375rem;
+    padding: 0 2rem;
+  }
+}

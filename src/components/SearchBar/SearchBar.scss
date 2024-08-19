@@ -1,0 +1,31 @@
+@import "../../styles/global.scss";
+
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid $primary-color-silver;
+  border-radius: 5px;
+  padding: 0.3125rem 0.625rem;
+  margin-right: 0.5rem;
+  background-color: $secondary-color-alabaster;
+
+  @include tablet {
+    width: 15rem;
+  }
+}
+
+.search-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.625rem;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+
+  font-size: 0.875rem;
+  background-color: transparent;
+}

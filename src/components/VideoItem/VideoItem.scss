@@ -1,0 +1,29 @@
+@import "../../styles/global.scss";
+
+.item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 13rem;
+
+    &--title {
+      font-weight: 600;
+    }
+  }
+
+  &__image {
+    max-width: 10rem;
+    max-height: 5rem;
+    height: auto;
+    aspect-ratio: 16/9;
+
+    object-fit: cover;
+    border-radius: 4px;
+    background-color: $secondary-color-mercury;
+  }
+}
