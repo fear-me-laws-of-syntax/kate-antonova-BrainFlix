@@ -3,6 +3,7 @@
 .vidlist {
   @include desktop {
     padding-left: 2rem;
+    border-left: 0.0625rem solid $secondary-color-mercury;
   }
 
   &__heading {
