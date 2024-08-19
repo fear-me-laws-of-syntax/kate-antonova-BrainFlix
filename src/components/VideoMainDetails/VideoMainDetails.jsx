@@ -32,7 +32,7 @@ function VideoMainDetails({ selectedVideo }) {
         </div>
       </div>
       </div>
-      <p>{selectedVideo.description}</p>
+      <p className="description">{selectedVideo.description}</p>
 
     </div>
   );
