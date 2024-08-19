@@ -7,6 +7,8 @@ import videos from "./data/video-details.json";
 import VideoList from "./components/VideoList/VideoList";
 import "./App.scss";
 
+// sprint-2
+
 function App() {
   const [selectedVideo, setSelectedVideo] = useState(videos[0]);
   return (
@@ -17,7 +19,7 @@ function App() {
       </div>
 
       <main className="main">
-        
+
         <div>
           <VideoMainDetails selectedVideo={selectedVideo} />
           <CommentList comments={selectedVideo.comments} />
