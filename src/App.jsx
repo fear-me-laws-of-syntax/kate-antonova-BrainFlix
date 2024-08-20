@@ -14,8 +14,8 @@ import UploadPage from "./pages/UploadPage/UploadPage"
 
 import "./App.scss";
 
-// egtgrth
 
+// testing for Sprint 2
 
 function App() {
   const [selectedVideo, setSelectedVideo] = useState(videos[0]);
