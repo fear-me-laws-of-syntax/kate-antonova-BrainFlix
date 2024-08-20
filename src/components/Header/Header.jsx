@@ -12,12 +12,12 @@ function Header() {
       <Logo />
 
       <div className="header-group">
-      <div className="header-search">
-        <SearchBar />
-        <UserPhoto />
+        <div className="header-search">
+          <SearchBar />
+          <UserPhoto />
+        </div>
+        <Button text="UPLOAD" imageUrl={uploadIcon} />
       </div>
-      <Button text="UPLOAD" imageUrl={uploadIcon} />
-    </div>
     </header>
   );
 }

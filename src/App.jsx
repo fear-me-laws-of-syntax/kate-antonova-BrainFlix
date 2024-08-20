@@ -5,9 +5,17 @@ import VideoMainDetails from "./components/VideoMainDetails/VideoMainDetails";
 import CommentList from "./components/CommentList/CommentList";
 import videos from "./data/video-details.json";
 import VideoList from "./components/VideoList/VideoList";
+
+
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import UploadPage from "./pages/UploadPage/UploadPage"
+
+
 import "./App.scss";
 
-// sprint-2
+
+// testing for Sprint 2
 
 function App() {
   const [selectedVideo, setSelectedVideo] = useState(videos[0]);
