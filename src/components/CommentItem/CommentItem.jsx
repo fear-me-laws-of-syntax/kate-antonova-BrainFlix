@@ -1,5 +1,8 @@
 import "./CommentItem.scss";
 
+import axios from 'axios';
+
+
 function CommentItem({ comment }) {
   return (
     <li className="comment-item">

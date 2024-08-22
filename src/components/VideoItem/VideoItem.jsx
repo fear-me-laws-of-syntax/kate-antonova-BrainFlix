@@ -1,4 +1,6 @@
 import "./VideoItem.scss";
+import axios from 'axios';
+
 
 function VideoItem({ video, setSelectedVideo }) {
   return (

@@ -1,6 +1,5 @@
 
 import "./UploadPage.scss";
-import Header from "../../components/Header/Header";
 
 function UploadPage() {
     return (

@@ -1,4 +1,6 @@
 import "./VideoMain.scss";
+import axios from 'axios';
+
 
 function VideoMain({ video }) {
   return (
@@ -11,4 +13,3 @@ function VideoMain({ video }) {
 }
 
 export default VideoMain;
-    

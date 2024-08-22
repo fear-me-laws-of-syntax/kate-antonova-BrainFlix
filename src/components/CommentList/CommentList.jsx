@@ -2,6 +2,9 @@ import CommentItem from "../CommentItem/CommentItem";
 import CommentForm from "../CommentForm/CommentForm";
 import "./CommentList.scss";
 
+import axios from 'axios';
+
+
 function CommentList({ comments }) {
   return (
     <>
