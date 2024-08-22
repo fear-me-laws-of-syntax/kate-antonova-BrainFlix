@@ -4,18 +4,21 @@ import Button from "../Button/Button";
 
 import "./CommentForm.scss";
 
+import axios from 'axios';
+
+
 export default function CommentForm() {
   return (
     <div className="comment-form">
 
-<div className="user-photo-padding">
-      <UserPhoto />
+      <div className="user-photo-padding">
+        <UserPhoto />
       </div>
 
       <div className="comment-form--input">
         <div className="conversation__form--group">
           <label className="conversation__form-label" htmlFor="msg">
-           JOIN THE CONVERSATION
+            JOIN THE CONVERSATION
           </label>
           <textarea
             id="msg"

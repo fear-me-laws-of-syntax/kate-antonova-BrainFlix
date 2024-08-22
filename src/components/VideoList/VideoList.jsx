@@ -1,6 +1,6 @@
-// import VideoItem from "../VideoItem/VideoItem";
+import VideoItem from "../VideoItem/VideoItem";
 // // import videos from "../../data/video-details.json";
-// import "./VideoList.scss";
+import "./VideoList.scss";
 
 
 // //replacing .json with api
@@ -73,23 +73,21 @@
 
 
 // sprint1
-// function VideoList({ selectedVideo, setSelectedVideo }) {
-//   const list = videos.filter((p) => p.id !== selectedVideo.id);
+export default function VideoList({ videos }) {
+  return (
+    <section className="vidlist">
+      <h2 className="vidlist__heading">Next Videos</h2>
+      <nav className="nav__list">
+        {videos.map((video) => (
+          <VideoItem
+            key={video.id}
+            video={video}
 
-//   return (
-//     <section className="vidlist">
-//       <h2 className="vidlist__heading">Next Videos</h2>
-//       <ul className="nav__list">
-//         {list.map((video) => (
-//           <VideoItem
-//             key={video.id}
-//             video={video}
-//             setSelectedVideo={setSelectedVideo}
-//           />
-//         ))}
-//       </ul>
-//     </section>
-//   );
-// }
+          />
+        ))}
+      </nav>
+    </section>
+  );
+}
 
 

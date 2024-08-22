@@ -4,7 +4,7 @@ import "./UploadPage.scss";
 function UploadPage() {
     return (
         <>
-            <Header />
+            {/* <Header /> */}
 
             <div>
                 <h1>Upload Video</h1>

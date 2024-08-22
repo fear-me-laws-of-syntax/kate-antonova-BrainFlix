@@ -8,15 +8,11 @@ import axios from 'axios';
 function CommentList({ comments }) {
   return (
     <>
-
-
-      {/* rehtrhrhrth */}
-
-      <h2>{comments.length} Comments</h2>
+      <h2>{comments?.length} Comments</h2>
       <CommentForm />
       <div className="comments">
-        {comments.map((comment) => (
-          <CommentItem key={comment.id} comment={comment} />
+        {comments?.map((comment) => (
+          <CommentItem key={comment.id} commentVideo={comment} />
         ))}
 
       </div>
