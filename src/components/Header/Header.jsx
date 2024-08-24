@@ -5,6 +5,7 @@ import uploadIcon from "../../assets/icons/upload.svg";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import UserPhoto from "../UserPhoto/UserPhoto";
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -16,7 +17,10 @@ function Header() {
           <SearchBar />
           <UserPhoto />
         </div>
-        <Button text="UPLOAD" imageUrl={uploadIcon} />
+        <Link to="/upload">
+          <Button text="UPLOAD" imageUrl={uploadIcon} />
+        </Link>
+
       </div>
     </header>
   );

@@ -1,1 +1,115 @@
 @import "../../styles/global.scss";
+
+.upload-page {
+//     @include desktop {
+// padding: 0 10%;
+//     }
+}
+
+
+  .upload__title {
+    border-top: 0.0625rem solid $secondary-color-mercury;
+    padding: 16px;
+
+    @include tablet {
+    border-bottom: 0.0625rem solid $secondary-color-mercury;
+    }
+    }
+
+.upload {
+    padding: 0 1rem;
+    // border-bottom: 1px solid $secondary-color-mercury;
+
+&__input {
+
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+
+    @include tablet {
+    border-bottom: 1px solid $secondary-color-mercury;
+    }
+
+@include desktop {
+    flex-direction: row;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+border-bottom: 1px solid $secondary-color-mercury;
+padding: 0 10%;
+    
+}
+}
+
+&__text {
+    @include desktop {
+width: 100%;
+    }
+}
+
+&__header {
+color: $primary-color-silver;
+text-transform: uppercase;
+padding-top: 0.5rem;
+
+&--cancel {
+    color: $primary-color-blue;
+    text-align: center;
+    padding: 1.5rem;
+
+    @include tablet {
+        text-align: right;
+        // width: calc(100% - 5rem); 
+        margin-right: 13rem;
+    }
+}
+}
+
+&__form {
+        width: 100%;
+		    padding: 0.5rem 1rem;
+		    border-radius: 0.25rem;
+		    font-family: "Avenir";
+		    margin-top: 0.5rem;
+		    resize: none;
+		    border: 1px solid $primary-color-silver;
+		    background-color: $secondary-color-alabaster;
+}
+}
+
+textarea.upload__form {
+    height: 5rem;
+
+    // @include desktop {
+    //     width: 100%;
+    // }
+}
+
+
+.imagePreview {
+    width: 100%;
+    max-width: 60vh;
+    aspect-ratio: 16/9;
+    border-radius: 4px;
+    padding-bottom: 1.5rem;
+    padding-top: 0.5rem;
+
+    @include tablet {
+        // width: 50%;
+    }
+
+     @include desktop {
+max-width: 34rem;
+    }
+}
+
+.button-publish {
+padding-top: 1rem;
+
+ @include tablet {
+    float: right;
+ }
+}
+
+#msg {
+    overflow: hidden;
+}
