@@ -1,37 +1,121 @@
+// import "./UploadPage.scss";
+// import publishIcon from "../../assets/icons/publish.svg";
+// import Button from "../../components/Button/Button";
+
+// function UploadPage() {
+//     return (
+//         <div className="upload-page">
+
+//             <h1 className="upload-page__title">Upload Video</h1>
+//             <div className="upload-page__content">
+
+//                 <div className="upload-page__input">
+//                     <div>
+//                         <h2 className="upload-page__header">VIDEO THUMBNAIL</h2>
+//                         <img className="upload-page__image-preview" src="src/assets/images/Upload-video-preview.jpg" alt="video preview" />
+//                     </div>
+//                     <div className="upload-page__text">
+//                         <h2 className="upload-page__header">TITLE YOUR VIDEO</h2>
+//                         <textarea className="upload-page__textarea" name="user_message" placeholder="Add a title to your video"></textarea>
+
+//                         <h2 className="upload-page__header">ADD A VIDEO DESCRIPTION</h2>
+//                         <textarea className="upload-page__textarea upload-page__textarea--description" name="user_message" placeholder="Add a description to your video"></textarea>
+//                     </div>
+//                 </div>
+
+//                 <div className="upload-page__button-publish">
+//                     <Button text="PUBLISH" imageUrl={publishIcon} />
+//                 </div>
+
+//                 <h2 className="upload-page__header upload-page__header--cancel">CANCEL</h2>
+
+//             </div>
+//         </div>
+//     );
+// }
+
+// export default UploadPage;
+
+
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./UploadPage.scss";
 import publishIcon from "../../assets/icons/publish.svg";
 import Button from "../../components/Button/Button";
 
-
 function UploadPage() {
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+    const [titleError, setTitleError] = useState(false);
+    const [descriptionError, setDescriptionError] = useState(false);
+    const navigate = useNavigate();
+
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+
+        let formIsValid = true;
+
+        if (title.trim() === "") {
+            setTitleError(true);
+            formIsValid = false;
+        } else {
+            setTitleError(false);
+        }
+
+        if (description.trim() === "") {
+            setDescriptionError(true);
+            formIsValid = false;
+        } else {
+            setDescriptionError(false);
+        }
+
+        if (formIsValid) {
+            alert("Your video was successfully published! Please press OK to be redirected to the homepage.");
+            navigate("/");
+        }
+    };
+
     return (
         <div className="upload-page">
+            <h1 className="upload-page__title">Upload Video</h1>
+            <div className="upload-page__content">
+                <form className="upload-page__form" onSubmit={handleFormSubmit}>
+                    <div className="upload-page__input">
+                        <div>
+                            <h2 className="upload-page__header">VIDEO THUMBNAIL</h2>
+                            <img
+                                className="upload-page__image-preview"
+                                src="src/assets/images/Upload-video-preview.jpg"
+                                alt="video preview"
+                            />
+                        </div>
+                        <div className="upload-page__text">
+                            <h2 className="upload-page__header">TITLE YOUR VIDEO</h2>
+                            <textarea
+                                className={`upload-page__textarea ${titleError ? "error" : ""}`}
+                                name="title"
+                                placeholder="Add a title to your video"
+                                value={title}
+                                onChange={(e) => setTitle(e.target.value)}
+                            />
 
-            <h1 className="upload__title">Upload Video</h1>
-            <div className="upload">
-
-                <div className="upload__input">
-                    <div>
-                        <h2 className="upload__header">VIDEO THUMBNAIL</h2>
-
-                        {/* <div className="upload__input"> */}
-                        <img className="imagePreview" src="src/assets/images/Upload-video-preview.jpg" alt="video preview" />
+                            <h2 className="upload-page__header">ADD A VIDEO DESCRIPTION</h2>
+                            <textarea
+                                className={`upload-page__textarea upload-page__textarea--description ${descriptionError ? "error" : ""}`}
+                                name="description"
+                                placeholder="Add a description to your video"
+                                value={description}
+                                onChange={(e) => setDescription(e.target.value)}
+                            />
+                        </div>
                     </div>
-                    <div className="upload__text">
-                        <h2 className="upload__header">TITLE YOUR VIDEO</h2>
-                        <textarea id="msg" name="user_message" placeholder="Add a title to your video"></textarea>
 
-                        <h2 className="upload__header">ADD A VIDEO DESCRIPTION</h2>
-                        <textarea className="upload__form" name="user_message" placeholder="Add a description to your video"></textarea>
+                    <div className="upload-page__button-publish">
+                        <Button text="PUBLISH" imageUrl={publishIcon} />
                     </div>
-                </div>
 
-                <div className="button-publish">
-                    <Button text="PUBLISH" imageUrl={publishIcon} />
-                </div>
-
-                <h2 className="upload__header--cancel">CANCEL</h2>
-
+                    <h2 className="upload-page__header upload-page__header--cancel">CANCEL</h2>
+                </form>
             </div>
         </div>
     );
