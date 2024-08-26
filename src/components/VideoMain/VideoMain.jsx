@@ -1,7 +1,6 @@
 import "./VideoMain.scss";
 import axios from 'axios';
 
-
 function VideoMain({ video }) {
   return (
     <div className="video">

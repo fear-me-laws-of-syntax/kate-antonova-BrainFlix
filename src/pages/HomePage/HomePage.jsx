@@ -9,7 +9,6 @@ import axios from "axios";
 
 function HomePage() {
     const { id } = useParams();
-    // console.log(id)
     const [videos, setVideos] = useState([])
     const [video, setVideo] = useState({})
 
@@ -50,8 +49,7 @@ function HomePage() {
 
     return (
         <>
-            {/* {(video && videos) && (
-                <> */}
+
             <VideoMain video={video} />
 
             <main className="main">
@@ -65,8 +63,7 @@ function HomePage() {
                     videos={filteredVideos}
                 />
             </main>
-            {/* </> */}
-            {/* )} */}
+
 
         </>
     );

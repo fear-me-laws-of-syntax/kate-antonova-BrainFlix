@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "./Logo.scss";
-// import logo from "../../assets/logo/BrainFlix-logo.svg";
 
 function Logo() {
   return (
