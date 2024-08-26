@@ -1,25 +1,28 @@
+import { useState, useEffect } from "react";
 import CommentItem from "../CommentItem/CommentItem";
 import CommentForm from "../CommentForm/CommentForm";
 import "./CommentList.scss";
 
-function CommentList({ comments }) {
+export default function CommentList({ comments = [] }) {
+  const [commentList, setCommentList] = useState(comments);
+
+  const handleAddComment = (newComment) => {
+    setCommentList([newComment, ...commentList]);
+  };
+
+  useEffect(() => {
+    setCommentList(comments);
+  }, [comments]);
+
   return (
     <>
-
-
-      {/* rehtrhrhrth */}
-
-      <h2>{comments.length} Comments</h2>
-      <CommentForm />
+      <h2>{commentList.length} Comments</h2>
+      <CommentForm onAddComment={handleAddComment} />
       <div className="comments">
-        {comments.map((comment) => (
-          <CommentItem key={comment.id} comment={comment} />
+        {commentList.map((comment) => (
+          <CommentItem key={comment.id} commentVideo={comment} />
         ))}
-
       </div>
     </>
   );
 }
-
-
-export default CommentList;

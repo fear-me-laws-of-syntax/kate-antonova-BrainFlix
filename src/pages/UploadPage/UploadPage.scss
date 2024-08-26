@@ -1,1 +1,109 @@
 @import "../../styles/global.scss";
+
+.upload-page {
+    @include desktop {
+    padding: 0 10%;
+    }
+
+    &__title {
+        padding: 16px;
+
+        @include tablet {
+            border-bottom: 0.0625rem solid $secondary-color-mercury;
+        }
+    }
+
+    &__content {
+        padding: 0 1rem;
+    }
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+
+        @include tablet {
+            border-bottom: 1px solid $secondary-color-mercury;
+        }
+
+        @include desktop {
+            flex-direction: row;
+            gap: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid $secondary-color-mercury;
+            padding: 0 10%;
+        }
+    }
+
+    &__text {
+        @include desktop {
+            width: 100%;
+        }
+    }
+
+    &__header {
+        color: $primary-color-silver;
+        text-transform: uppercase;
+        padding-top: 0.5rem;
+
+        &--cancel {
+            color: $primary-color-blue;
+            text-align: center;
+            padding: 1.5rem;
+
+            @include tablet {
+                text-align: right;
+                margin-right: 12rem;
+            }
+
+               @include desktop {
+                   margin-right: 17rem;
+               } 
+        }
+    }
+
+
+   &__textarea {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-family: "Avenir";
+    margin-top: 0.5rem;
+    resize: none;
+    border: 1px solid $primary-color-silver;
+    background-color: $secondary-color-alabaster;
+
+    &--description {
+        height: 5rem;
+    }
+
+   &.error {
+    border-color: $error-color; 
+    }
+}
+
+    &__image-preview {
+        width: 100%;
+        max-width: 60vh;
+        aspect-ratio: 16/9;
+        border-radius: 4px;
+        padding-bottom: 1.5rem;
+        padding-top: 0.5rem;
+
+        @include desktop {
+            max-width: 34rem;
+        }
+    }
+
+    &__button-publish {
+        padding-top: 1rem;
+
+        @include tablet {
+            float: right;
+        }
+
+         @include desktop {
+padding-right: 10%;
+         }
+    }
+}

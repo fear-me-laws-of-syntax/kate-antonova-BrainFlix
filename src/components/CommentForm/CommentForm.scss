@@ -1,5 +1,6 @@
 @import "../../styles/global.scss";
 
+
 .comment-form {
   display: flex;
 
@@ -47,4 +48,11 @@
 
 .button {
   margin-right: 0.5rem;
+}
+
+#msg {
+
+   &.error {
+    border-color: $error-color; 
+    }
 }

@@ -19,11 +19,3 @@ video {
   }
 }
 
-.video__img::-webkit-media-controls-play-button,
-.video__img::-webkit-media-controls-pause-button,
-.video__img::-webkit-media-controls-fullscreen-button,
-.video__img::-webkit-media-controls-volume-slider,
-.video__img::-webkit-media-controls-mute-button {
-  /* Icon controls styling */
-  fill: white; /* White fill color for all control icons */
-}
