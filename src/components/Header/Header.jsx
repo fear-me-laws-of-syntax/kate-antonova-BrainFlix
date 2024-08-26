@@ -17,7 +17,7 @@ function Header() {
           <SearchBar />
           <UserPhoto />
         </div>
-        <Link to="/upload">
+        <Link className="upload-button" to="/upload">
           <Button text="UPLOAD" imageUrl={uploadIcon} />
         </Link>
 
