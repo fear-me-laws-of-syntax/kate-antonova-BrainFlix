@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "./UploadPage.scss";
 import publishIcon from "../../assets/icons/publish.svg";
 import Button from "../../components/Button/Button";
+import axios from "axios";
+import { apiUrl } from "../../utils/const";
 
 function UploadPage() {
     const [title, setTitle] = useState("");
@@ -11,7 +13,7 @@ function UploadPage() {
     const [descriptionError, setDescriptionError] = useState(false);
     const navigate = useNavigate();
 
-    const handleFormSubmit = (event) => {
+    const handleFormSubmit = async (event) => {
         event.preventDefault();
 
         let formIsValid = true;
@@ -31,10 +33,20 @@ function UploadPage() {
         }
 
         if (formIsValid) {
+            try {
+                await axios.post(`${apiUrl}/videos`, { title, description });
+            }
+            catch (err) {
+                console.log(err)
+            }
+
             alert("Your video was successfully published! Please press OK to be redirected to the homepage.");
             navigate("/");
         }
     };
+
+
+
 
     return (
         <div className="upload-page">

@@ -1,26 +1,23 @@
 import Header from "./components/Header/Header";
-import VideoMain from "./components/VideoMain/VideoMain";
-import VideoMainDetails from "./components/VideoMainDetails/VideoMainDetails";
-import CommentList from "./components/CommentList/CommentList";
-
-import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-import axios from 'axios';
 import HomePage from "./pages/HomePage/HomePage.jsx"
 import UploadPage from "./pages/UploadPage/UploadPage.jsx"
+import NotFound from './pages/NotFound/NotFound.jsx';
 
 import "./App.scss";
 
 function App() {
   return (
     <BrowserRouter>
+
       <Header />
 
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/videos/:id" element={<HomePage />} />
         <Route path="/upload" element={<UploadPage />} />
+        <Route path="*" element={<NotFound />} />
+
       </Routes>
 
     </BrowserRouter>

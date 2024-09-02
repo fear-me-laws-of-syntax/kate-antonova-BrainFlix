@@ -4,7 +4,7 @@ import UserPhoto from "../UserPhoto/UserPhoto";
 import Button from "../Button/Button";
 import "./CommentForm.scss";
 
-export default function CommentForm({ onAddComment }) {
+export default function CommentForm() {
   const [comment, setComment] = useState("");
   const [commentError, setCommentError] = useState(false);
 
@@ -21,14 +21,8 @@ export default function CommentForm({ onAddComment }) {
     }
 
     if (formIsValid) {
-      const newComment = {
-        id: Date.now().toString(),
-        name: "Mohan Muruge",
-        comment: comment,
-        timestamp: new Date(),
-      };
+      alert("Comment was added")
 
-      onAddComment(newComment);
       setComment("");
     }
   };
