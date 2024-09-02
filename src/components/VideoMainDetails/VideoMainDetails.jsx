@@ -1,6 +1,4 @@
 import "./VideoMainDetails.scss";
-import axios from 'axios';
-
 
 function VideoMainDetails({ selectedVideo }) {
   return (

@@ -1,6 +1,5 @@
 import { apiUrl } from "../../utils/const";
 import "./VideoMain.scss";
-import axios from 'axios';
 
 function VideoMain({ video }) {
   return (

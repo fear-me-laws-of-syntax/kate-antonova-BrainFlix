@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom';
 import "./VideoItem.scss";
 import { apiUrl } from '../../utils/const';
 
-
-
 function VideoItem({ video }) {
   const scrollUp = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
