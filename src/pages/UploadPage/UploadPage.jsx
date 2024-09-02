@@ -36,8 +36,8 @@ function UploadPage() {
             try {
                 await axios.post(`${apiUrl}/videos`, { title, description });
             }
-            catch (err) {
-                console.log(err)
+            catch (error) {
+                console.log(error)
             }
 
             alert("Your video was successfully published! Please press OK to be redirected to the homepage.");

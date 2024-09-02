@@ -29,8 +29,8 @@ function HomePage() {
                 console.log(data);
                 setVideos(data);
             }
-            catch (err) {
-                console.log(err)
+            catch (error) {
+                console.log(error)
             }
         }
 
@@ -46,8 +46,8 @@ function HomePage() {
                 console.log(data);
                 setVideo(data);
             }
-            catch (err) {
-                console.log(err)
+            catch (error) {
+                console.log(error)
             }
         }
 
