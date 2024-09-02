@@ -5,6 +5,8 @@ import publishIcon from "../../assets/icons/publish.svg";
 import Button from "../../components/Button/Button";
 import axios from "axios";
 import { apiUrl } from "../../utils/const";
+import { Link } from "react-router-dom";
+
 
 function UploadPage() {
     const [title, setTitle] = useState("");
@@ -87,7 +89,10 @@ function UploadPage() {
                         <Button text="PUBLISH" imageUrl={publishIcon} />
                     </div>
 
-                    <h2 className="upload-page__header upload-page__header--cancel">CANCEL</h2>
+                    {/* <h2 className="upload-page__header upload-page__header--cancel">CANCEL</h2> */}
+                    <Link to="/">
+                        <h2 className="upload-page__header upload-page__header--cancel">CANCEL</h2>
+                    </Link>
                 </form>
             </div>
         </div>
