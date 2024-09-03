@@ -20,6 +20,8 @@ function HomePage() {
 
     let videoIdToDisplay = id ?? defaultVideoId;
 
+    const selectedVideo = videos.find((video) => video.id === videoIdToDisplay);
+
     const filteredVideos = videos.filter(video => video.id !== videoIdToDisplay)
 
     useEffect(() => {
