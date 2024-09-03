@@ -1,7 +1,6 @@
 import VideoItem from "../VideoItem/VideoItem";
 import "./VideoList.scss";
 
-
 export default function VideoList({ videos }) {
   return (
     <section className="vidlist">

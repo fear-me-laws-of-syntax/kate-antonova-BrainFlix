@@ -4,7 +4,7 @@ import VideoMain from "../../components/VideoMain/VideoMain";
 import VideoMainDetails from "../../components/VideoMainDetails/VideoMainDetails";
 import CommentList from "../../components/CommentList/CommentList";
 import VideoList from "../../components/VideoList/VideoList";
-import { apiUrl, apiKey } from "../../utils/const";
+import { apiUrl } from "../../utils/const";
 import axios from "axios";
 
 function HomePage() {
@@ -20,14 +20,20 @@ function HomePage() {
 
     let videoIdToDisplay = id ?? defaultVideoId;
 
+    const selectedVideo = videos.find((video) => video.id === videoIdToDisplay);
+
     const filteredVideos = videos.filter(video => video.id !== videoIdToDisplay)
-    console.log(filteredVideos);
 
     useEffect(() => {
         const getVideos = async () => {
-            const { data } = await axios.get(`${apiUrl}/videos?api_key=${apiKey}`);
-            console.log(data);
-            setVideos(data);
+            try {
+                const { data } = await axios.get(`${apiUrl}/videos`);
+                console.log(data);
+                setVideos(data);
+            }
+            catch (error) {
+                console.log(error)
+            }
         }
 
         getVideos();
@@ -36,16 +42,20 @@ function HomePage() {
 
     useEffect(() => {
         const getVideo = async () => {
-            const { data } = await axios.get(`${apiUrl}/videos/${videoIdToDisplay}?api_key=${apiKey}`);
-            console.log(data);
-            setVideo(data);
+            if (!videoIdToDisplay) return;
+            try {
+                const { data } = await axios.get(`${apiUrl}/videos/${videoIdToDisplay}`);
+                console.log(data);
+                setVideo(data);
+            }
+            catch (error) {
+                console.log(error)
+            }
         }
 
         getVideo();
     }, [videoIdToDisplay])
 
-    console.log(videos)
-    console.log("video", video)
 
     return (
         <>

@@ -3,6 +3,10 @@ import { useNavigate } from "react-router-dom";
 import "./UploadPage.scss";
 import publishIcon from "../../assets/icons/publish.svg";
 import Button from "../../components/Button/Button";
+import axios from "axios";
+import { apiUrl } from "../../utils/const";
+import { Link } from "react-router-dom";
+
 
 function UploadPage() {
     const [title, setTitle] = useState("");
@@ -11,7 +15,7 @@ function UploadPage() {
     const [descriptionError, setDescriptionError] = useState(false);
     const navigate = useNavigate();
 
-    const handleFormSubmit = (event) => {
+    const handleFormSubmit = async (event) => {
         event.preventDefault();
 
         let formIsValid = true;
@@ -31,10 +35,20 @@ function UploadPage() {
         }
 
         if (formIsValid) {
+            try {
+                await axios.post(`${apiUrl}/videos`, { title, description });
+            }
+            catch (error) {
+                console.log(error)
+            }
+
             alert("Your video was successfully published! Please press OK to be redirected to the homepage.");
             navigate("/");
         }
     };
+
+
+
 
     return (
         <div className="upload-page">
@@ -75,7 +89,10 @@ function UploadPage() {
                         <Button text="PUBLISH" imageUrl={publishIcon} />
                     </div>
 
-                    <h2 className="upload-page__header upload-page__header--cancel">CANCEL</h2>
+                    {/* <h2 className="upload-page__header upload-page__header--cancel">CANCEL</h2> */}
+                    <Link to="/">
+                        <h2 className="upload-page__header upload-page__header--cancel">CANCEL</h2>
+                    </Link>
                 </form>
             </div>
         </div>

@@ -1,8 +1,5 @@
 import "./CommentItem.scss";
 
-import axios from 'axios';
-
-
 function CommentItem({ commentVideo }) {
   const { name, timestamp, comment } = commentVideo
   return (
@@ -25,3 +22,4 @@ function CommentItem({ commentVideo }) {
 }
 
 export default CommentItem;
+
